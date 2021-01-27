@@ -1,2 +1,2 @@
-# personal-portfolio
+# My personal portfolio
 A personal portfolio of my work
