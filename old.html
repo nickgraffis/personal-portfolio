@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+  <title>Nick Graffis</title>
+  <link rel="stylesheet" href="index.css">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,400;0,700;1,300;1,400;1,700&display=swap" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/7652f157a9.js" crossorigin="anonymous"></script>
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <script src="https://twemoji.maxcdn.com/v/latest/twemoji.min.js" crossorigin="anonymous"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <style>
+    body {
+      /* font-family: 'Inter', sans-serif; */
+      font-family: 'Roboto Condensed', sans-serif;
+    }
+  </style>
+</head>
+<body>
+<div class="bg-blob">
+  <div class="hero h-screen w-full">
+    <div class="w-full h-12 flex justify-end p-8 fixed">
+      <div class="flex justify-between w-3/12">
+        <div class="text-gray-100 font-semibold">About</div>
+        <div class="text-gray-100 font-semibold">Skills</div>
+        <div class="text-gray-100 font-semibold">Work</div>
+        <div class="text-gray-100 font-semibold">Education</div>
+        <div class="text-gray-100 font-semibold">Blog</div>
+    </div>
+    </div>
+    <div class="blob z-10 h-full w-full">
+      <div class="stars"> </div>
+      <div class="grid grid-cols-12 h-full">
+        <div class="col-span-6">
+        </div>
+        <div class="col-span-6 h-full flex justify-center flex-col">
+          <p class="text-6xl text-gray-100 font-black title text-right mr-12 ml-8">
+            Hey, I'm <span class="text-purple-900">Nick Graffis</span>
+          </p>
+          <p class="text-3xl text-purple-900 mt-8 mb-8 mr-12 ml-24 font-semibold text-right intro">
+            I develop <span class="change text-gray-100"></span>
+          </p>
+          <div class="socials flex justify-end mr-12">
+            <div class="w-14 h-14 rounded flex justify-center items-center text-2xl text-white">
+              <i class="fab fa-codepen"></i>
+            </div>
+            <div class="w-14 h-14 rounded flex justify-center items-center text-2xl text-white">
+              <i class="fab fa-github"></i>
+              </div>
+              <div class="w-14 h-14 rounded flex justify-center items-center text-2xl text-white">
+              <i class="fab fa-twitter"></i>
+              </div>
+              <div class="w-14 h-14 rounded flex justify-center items-center text-2xl text-white">
+              <i class="fab fa-dribbble"></i></div>
+              <div class="w-14 h-14 rounded flex justify-center items-center text-2xl text-white">
+              <i class="fab fa-linkedin-in"></i>
+              </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="more">
+  <div class="grid grid-cols-12 gap-4 mx-12 mb-56">
+    <div class="col-span-3 flex justify-center">
+      <div class="float-1 w-64 h-64 bg-fusia rounded-xl text-white flex justify-center items-center text-8xl"><i class="fas fa-fish"></i></div>
+    </div>
+    <div class="col-span-3 flex justify-center">
+      <div class="float-2 w-64 h-64 bg-fusia rounded-xl text-white flex justify-center items-center text-8xl"><i class="fas fa-cloud"></i></div>
+    </div>
+    <div class="col-span-3 flex justify-center">
+      <div class="float-3 w-64 h-64 bg-fusia rounded-xl text-white flex justify-center items-center text-8xl"><i class="fas fa-square"></i></div>
+    </div>
+    <div class="col-span-3 flex justify-center">
+      <div class="float-4 w-64 h-64 bg-fusia rounded-xl text-white flex justify-center items-center"></div>
+    </div>
+  </div>
+  </div>
+</div>
+  <script>
+//   class TextScramble {
+//   constructor(el) {
+//     this.el = el
+//     this.chars = '!<>-_\\/—=+*^?#�λ\u2588'
+//     this.update = this.update.bind(this)
+//   }
+//   setText(newText) {
+//     const oldText = this.el.innerText
+//     const length = Math.max(oldText.length, newText.length)
+//     const promise = new Promise((resolve) => this.resolve = resolve)
+//     this.queue = []
+//     for (let i = 0; i < length; i++) {
+//       const from = oldText[i] || ''
+//       const to = newText[i] || ''
+//       const start = Math.floor(Math.random() * 40)
+//       const end = start + Math.floor(Math.random() * 40)
+//       this.queue.push({ from, to, start, end })
+//     }
+//     cancelAnimationFrame(this.frameRequest)
+//     this.frame = 0
+//     this.update()
+//     return promise
+//   }
+//   update() {
+//     let output = ''
+//     let complete = 0
+//     for (let i = 0, n = this.queue.length; i < n; i++) {
+//       let { from, to, start, end, char } = this.queue[i]
+//       if (this.frame >= end) {
+//         complete++
+//         output += to
+//       } else if (this.frame >= start) {
+//         if (!char || Math.random() < 0.28) {
+//           char = this.randomChar()
+//           this.queue[i].char = char
+//         }
+//         output += `<span class="dud">${char}</span>`
+//       } else {
+//         output += from
+//       }
+//     }
+//     this.el.innerHTML = output
+//     if (complete === this.queue.length) {
+//       this.resolve()
+//     } else {
+//       this.frameRequest = requestAnimationFrame(this.update)
+//       this.frame++
+//     }
+//   }
+//   randomChar() {
+//     return this.chars[Math.floor(Math.random() * this.chars.length)]
+//   }
+// }
+//
+// // ——————————————————————————————————————————————————
+// // Example
+// // ——————————————————————————————————————————————————
+//
+// const phrases = [
+//   'web applications with javascript',
+//   'python applications',
+//   'in go',
+//   'in php, laravel, and ruby'
+// ]
+//
+// const el = document.querySelector('.change')
+// const fx = new TextScramble(el)
+//
+// let counter = 0
+// const next = () => {
+//   fx.setText(phrases[counter]).then(() => {
+//     setTimeout(next, 800)
+//   })
+//   counter = (counter + 1) % phrases.length
+// }
+//
+// // next()
+//   var title = document.querySelector('.title');
+//   var div = document.querySelector('.intro');
+//       twemoji.parse(document.querySelector('.intro'));
+//       twemoji.parse(document.querySelector('.title'));
+//       var img = div.querySelector('img');
+//       let i = 0; let sizes = [3, 4, 5]; function getRandomInt(max) { return Math.floor(Math.random() * Math.floor(max)); } while (i < 20) { let size = sizes[getRandomInt(3)]; let top = getRandomInt(100); let left = getRandomInt(70);
+//       document.querySelector('.stars').innerHTML += ` <div style="height: ${size}px; width: ${size}px; top: ${top - 10}%; left: ${left + 15}%;"></div> `; i++; }
+  </script>
+</body>
+</html>
